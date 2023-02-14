@@ -1,0 +1,33 @@
+{% extends "home1.html" %}
+{% block title %} Sign Up {% endblock %}
+{% block content %}
+
+
+<center><form action="/submit" method="post" class="form-group mt-5">
+    <h3 align="center">Sign Up</h3>
+    {% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+    <div class="form" >
+        <label for="nom" text-align="left" >Nom : </label>
+        <input type="text" class="form-control"  id="nom" name="nom" placeholder="Entrer votre nom">
+
+        <label for="prenom" >Prenoms : </label>
+        <input type="text" class="form-control"   id="prenom" name="prenom" placeholder="Entrer votre prenom" >
+
+        <label for="email" >Email : </label>
+        <input type="email" class="form-control"  id="email" name="email" placeholder="Entrer votre Email" >
+
+        <label for="password1" >Mot de passe : </label>
+        <input type="password" class="form-control"  id="password1" name="password1" placeholder="Entrer votre mot de passe" >
+
+        <label for="confirm_password" >Confirmer le mot de passe : </label>
+        <input type="password" class="form-control"   id="confirm_password" name="confirm_password" placeholder="Confirmer votre mot de passe">
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form></center>
+{% endblock content %}
+
+
+        

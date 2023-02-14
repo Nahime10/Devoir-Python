@@ -1,0 +1,7 @@
+{% extends "home.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<form action="/logout" method="post" class="form-group mt-5">
+    <p>Voulez-vous vous déconnecter?</p><input type="submit" name="deconnexion" value="se déconnecter">
+</form>
+{%endblock%}

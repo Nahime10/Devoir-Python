@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="C:\Users\ADMIN\Desktop\styling.css">
+    <title>{%block title %} HOME {%endblock%}</title>
+    <style>
+    body{
+        background-color: rgb(111, 217, 196);
+    }
+</style>
+</head>
+
+
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div  class="collapse navbar-collapse" id="navbar">
+            <div class="navbar nav">
+                <a href="/" class="nav-item nav-link" id="login">LOG IN</a>
+                <a href="/logout" class="nav-item nav-link" id="logout">LOG OUT</a>
+                <a href="/signup" class="nav-item nav-link" id="signup">SIGN UP</a>
+                <a href="/acceuil" class="nav-item nav-link" id="home">ACCUEIL</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}  {% endblock %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "home1.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<style>
+    body {
+        background-color: #eb7773;
+    }
+</style>
+<center><form action="/" method="post" class="form-group mt-5">
+    <h2>Connexion</h2>
+    <body>
+        {% if message %}
+             <div class="alert alert-danger">{{ message }}</div>
+        {% endif %} 
+        <div class="form">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" name="email" id="email" placeholder=" "  >
+        
+        
+            <label for="password" >Mot de passe :  </label>
+            <input type="password" name="password" id="password">
+        </div> </br>
+    </body>
+    <input type="submit" type="button" value="se connecter">&nbsp &nbsp Vous n'avez pas de compte? <a href="/submit">S'enregistrer</a>
+</form></center>
+{%endblock%}
